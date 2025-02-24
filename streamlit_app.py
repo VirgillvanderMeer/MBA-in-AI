@@ -13,6 +13,31 @@ if st.button("Klik hier"):
 # Sidebar (left)
 with st.sidebar:
     st.header("🔍 Invoer gegevens")
+
+    # Keuzemenu
+keuze = st.selectbox(
+    "Welke gegevens wil je invoeren?",
+    ["Voorletter(s) + Achternaam", "Straatnaam + Huisnummer", "Postcode + Plaats"]
+)
+
+# Toon de juiste invoervelden op basis van de keuze
+if keuze == "Voorletter(s) + Achternaam":
+    voorletters = st.text_input("Voorletter(s)")
+    achternaam = st.text_input("Achternaam")
+    if st.button("Opslaan"):
+        st.success(f"Opgeslagen: {voorletters} {achternaam}")
+
+elif keuze == "Straatnaam + Huisnummer":
+    straatnaam = st.text_input("Straatnaam")
+    huisnummer = st.text_input("Huisnummer")
+    if st.button("Opslaan"):
+        st.success(f"Opgeslagen: {straatnaam} {huisnummer}")
+
+elif keuze == "Postcode + Plaats":
+    postcode = st.text_input("Postcode")
+    plaats = st.text_input("Plaats")
+    if st.button("Opslaan"):
+        st.success(f"Opgeslagen: {postcode} {plaats}")
     
     # Tekstinvoer
     naam = st.text_input("👤 Voorletters + Achternaam")
