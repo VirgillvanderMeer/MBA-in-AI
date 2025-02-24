@@ -20,9 +20,9 @@ postcode = st.sidebar.text_input("Postcode + Plaats", value="1234 AB, Amsterdam"
 # Opslaan-knop
 if st.sidebar.button("Opslaan"):
     st.success(f"✅ Opgeslagen gegevens:\n\n"
-               f"**Naam**: {voorletters}\n"
-               f"**Adres**: {straatnaam}\n"
-               f"**Postcode en Plaats**: {postcode}")
+               f"****: {voorletters}\n"
+               f"****: {straatnaam}\n"
+               f"****: {postcode}")
 
     # Dropdown-keuze
     keuze = st.selectbox("📌 Kies een categorie:", ["Optie A", "Optie B", "Optie C"])
