@@ -17,13 +17,13 @@ st.sidebar.markdown("""
     <style>
         /* Verwijder de standaard marges tussen invoervelden */
         div[data-testid="stSidebar"] div[data-testid="stVerticalBlock"] > div {
-            margin-bottom: -40px;  /* Negatieve marge om velden dichter op elkaar te zetten */
+            margin-bottom: -10px;  /* Negatieve marge om velden dichter op elkaar te zetten */
             padding-bottom: 0px;
         }
         
         /* Verwijder extra padding in de invoervelden */
         div[data-testid="stTextInput"] {
-            margin-bottom: -55px !important; /* Verklein de ruimte tussen invoervelden */
+            margin-bottom: -40px !important; /* Verklein de ruimte tussen invoervelden */
         }
         
         /* Verwijder ongewenste extra witruimte */
