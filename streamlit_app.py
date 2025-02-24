@@ -15,14 +15,9 @@ with st.sidebar:
     st.header("🔍 Invoer gegevens")
 
 # Invoervelden in de sidebar
-voorletters = st.sidebar.text_input("Voorletter(s)")
-achternaam = st.sidebar.text_input("Achternaam")
-
-straatnaam = st.sidebar.text_input("Straatnaam")
-huisnummer = st.sidebar.text_input("Huisnummer")
-
-postcode = st.sidebar.text_input("Postcode")
-plaats = st.sidebar.text_input("Plaats")
+voorletters = st.sidebar.text_input("Voorletter(s) + achternaam")
+straatnaam = st.sidebar.text_input("Straatnaam + huisnummer")
+postcode = st.sidebar.text_input("Postcode + plaats")
 
 # Opslaan-knop in de sidebar
 if st.sidebar.button("Opslaan"):
