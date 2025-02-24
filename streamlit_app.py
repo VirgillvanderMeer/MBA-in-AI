@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title("De Juridische Briefhulp ⚖️✍️📜")
-st.write("Genereer eenvoudig je Beslissing op bezwaar. ✅🔄🤝🚀")
+st.write("Genereer eenvoudig de Beslissing op bezwaar. ✅🔄🤝🚀")
 
 naam = st.text_input("Voorletter(s) + Achternaam")
 if naam:
