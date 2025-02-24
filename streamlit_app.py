@@ -43,6 +43,10 @@ st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
 
 # Opslaan-knop
 if st.sidebar.button("Opslaan"):
+    # Postcode en plaats splitsen (ervan uitgaande dat er een spatie tussen zit)
+    parts = postcode.split(" ", 1)
+    postcode_clean = parts[0] if len(parts) > 0 else ""
+    plaats = parts[1].upper() if len(parts) > 1 else ""  # Zet plaatsnaam in hoofdletters
     st.markdown(f"""
     ✅ **Opgeslagen gegevens:**  
 
