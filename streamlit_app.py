@@ -14,30 +14,22 @@ if st.button("Klik hier"):
 with st.sidebar:
     st.header("🔍 Invoer gegevens")
 
-# Keuzemenu
-keuze = st.selectbox(
-    "Welke gegevens wil je invoeren?",
-    ["Voorletter(s) + Achternaam", "Straatnaam + Huisnummer", "Postcode + Plaats"]
-)
+# Invoervelden in de sidebar
+voorletters = st.sidebar.text_input("Voorletter(s)")
+achternaam = st.sidebar.text_input("Achternaam")
 
-# Toon de juiste invoervelden op basis van de keuze
-if keuze == "Voorletter(s) + Achternaam":
-    voorletters = st.text_input("Voorletter(s)")
-    achternaam = st.text_input("Achternaam")
-    if st.button("Opslaan"):
-        st.success(f"Opgeslagen: {voorletters} {achternaam}")
+straatnaam = st.sidebar.text_input("Straatnaam")
+huisnummer = st.sidebar.text_input("Huisnummer")
 
-elif keuze == "Straatnaam + Huisnummer":
-    straatnaam = st.text_input("Straatnaam")
-    huisnummer = st.text_input("Huisnummer")
-    if st.button("Opslaan"):
-        st.success(f"Opgeslagen: {straatnaam} {huisnummer}")
+postcode = st.sidebar.text_input("Postcode")
+plaats = st.sidebar.text_input("Plaats")
 
-elif keuze == "Postcode + Plaats":
-    postcode = st.text_input("Postcode")
-    plaats = st.text_input("Plaats")
-    if st.button("Opslaan"):
-        st.success(f"Opgeslagen: {postcode} {plaats}")
+# Opslaan-knop in de sidebar
+if st.sidebar.button("Opslaan"):
+    st.success(f"✅ Opgeslagen gegevens:\n\n"
+               f"**Naam**: {voorletters} {achternaam}\n"
+               f"**Adres**: {straatnaam} {huisnummer}\n"
+               f"**Postcode en Plaats**: {postcode} {plaats}")
     
     # Tekstinvoer
     naam = st.text_input("👤 Voorletters + Achternaam")
