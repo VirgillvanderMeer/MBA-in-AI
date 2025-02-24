@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("De juridische briefassistent")
+st.title("De Briefhulp")
 st.write("Genereer eenvoudig je beslissing op bezwaar.")
 
 naam = st.text_input("Wat is je naam?")
@@ -10,7 +10,7 @@ if naam:
 if st.button("Klik hier"):
     st.success("Je hebt op de knop geklikt!")
 
-# Sidebar (Verticaal vlak)
+# Sidebar (left)
 with st.sidebar:
     st.header("🔍 Filters & Invoer")
     
