@@ -24,6 +24,16 @@ if st.sidebar.button("Opslaan"):
                f"{straatnaam}\n"
                f"{postcode}")
 
+# Opslaan-knop
+if st.sidebar.button("Opslaan"):
+    st.markdown(f"""
+    ✅ **Opgeslagen gegevens:**  
+
+    **Naam:** {voorletters}  
+    **Adres:** {straatnaam}  
+    **Postcode en Plaats:** {postcode}  
+    """)
+
     # Dropdown-keuze
     keuze = st.selectbox("📌 Kies een categorie:", ["Optie A", "Optie B", "Optie C"])
 
