@@ -12,7 +12,16 @@ if st.button("Klik hier"):
 with st.sidebar:
     st.header("🔍 Invoer gegevens")
 
-# Invoervelden in de sidebar zonder titels, alleen placeholders
+# CSS om de afstand tussen de invoervelden te verkleinen
+st.sidebar.markdown("""
+    <style>
+        div[data-testid="stSidebar"] div[data-testid="stVerticalBlock"] > div {
+            margin-bottom: -10px; /* Pas de afstand tussen de velden aan */
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Invoervelden in de sidebar zonder labels, alleen placeholders
 voorletters = st.sidebar.text_input("", placeholder="Voorletter(s) + Achternaam")
 straatnaam = st.sidebar.text_input("", placeholder="Straatnaam + Huisnummer")
 postcode = st.sidebar.text_input("", placeholder="Postcode + Plaats")
