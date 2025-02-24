@@ -17,7 +17,7 @@ st.sidebar.markdown("""
     <style>
         /* Verwijder de standaard marges tussen invoervelden */
         div[data-testid="stSidebar"] div[data-testid="stVerticalBlock"] > div {
-            margin-bottom: -20px;  /* Negatieve marge om velden dichter op elkaar te zetten */
+            margin-bottom: -40px;  /* Negatieve marge om velden dichter op elkaar te zetten */
             padding-bottom: 0px;
         }
         
