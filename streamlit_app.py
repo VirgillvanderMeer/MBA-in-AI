@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("De Briefhulp")
+st.title("De Juridische Briefhulp")
 st.write("Genereer eenvoudig je beslissing op bezwaar.")
 
 naam = st.text_input("Wat is je naam?")
