@@ -19,13 +19,6 @@ postcode = st.sidebar.text_input("Postcode + Plaats", value="1234 AB, Amsterdam"
 
 # Opslaan-knop
 if st.sidebar.button("Opslaan"):
-    st.success(f"✅ Opgeslagen gegevens:\n\n"
-               f"{voorletters}\n"
-               f"{straatnaam}\n"
-               f"{postcode}")
-
-# Opslaan-knop
-if st.sidebar.button("Opslaan"):
     st.markdown(f"""
     ✅ **Opgeslagen gegevens:**  
 
