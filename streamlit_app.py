@@ -12,19 +12,31 @@ if st.button("Klik hier"):
 with st.sidebar:
     st.header("🔍 Invoer gegevens")
 
-# CSS om de afstand tussen de invoervelden te verkleinen
+# CSS om de tussenruimte volledig te verkleinen
 st.sidebar.markdown("""
     <style>
+        /* Verwijder de standaard marges tussen invoervelden */
         div[data-testid="stSidebar"] div[data-testid="stVerticalBlock"] > div {
-            margin-bottom: -10px; /* Pas de afstand tussen de velden aan */
+            margin-bottom: -20px;  /* Negatieve marge om velden dichter op elkaar te zetten */
+            padding-bottom: 0px;
+        }
+        
+        /* Verwijder extra padding in de invoervelden */
+        div[data-testid="stTextInput"] {
+            margin-bottom: -15px !important; /* Verklein de ruimte tussen invoervelden */
+        }
+        
+        /* Verwijder ongewenste extra witruimte */
+        section[data-testid="stSidebar"] div {
+            padding-bottom: 0px !important;
         }
     </style>
 """, unsafe_allow_html=True)
 
 # Invoervelden in de sidebar zonder labels, alleen placeholders
-voorletters = st.sidebar.text_input("", placeholder="Voorletter(s) + Achternaam")
-straatnaam = st.sidebar.text_input("", placeholder="Straatnaam + Huisnummer")
-postcode = st.sidebar.text_input("", placeholder="Postcode + Plaats")
+voorletters = st.sidebar.text_input("", placeholder="Voorletter(s) + achternaam")
+straatnaam = st.sidebar.text_input("", placeholder="Straatnaam + huisnummer")
+postcode = st.sidebar.text_input("", placeholder="Postcode + plaats")
 
 # Opslaan-knop
 if st.sidebar.button("Opslaan"):
