@@ -12,17 +12,17 @@ if st.button("Klik hier"):
 with st.sidebar:
     st.header("🔍 Invoer gegevens")
 
-# Invoervelden in de sidebar
-voorletters = st.sidebar.text_input("Voorletter(s) + achternaam")
-straatnaam = st.sidebar.text_input("Straatnaam + huisnummer")
-postcode = st.sidebar.text_input("Postcode + plaats")
+# Invoervelden in de sidebar met standaardtekst
+voorletters = st.sidebar.text_input("Voorletter(s) + Achternaam", value="J. de Vries")
+straatnaam = st.sidebar.text_input("Straatnaam + Huisnummer", value="Hoofdstraat 12")
+postcode = st.sidebar.text_input("Postcode + Plaats", value="1234 AB, Amsterdam")
 
-# Opslaan-knop in de sidebar
+# Opslaan-knop
 if st.sidebar.button("Opslaan"):
     st.success(f"✅ Opgeslagen gegevens:\n\n"
-               f"**Naam**: {voorletters} {achternaam}\n"
-               f"**Adres**: {straatnaam} {huisnummer}\n"
-               f"**Postcode en Plaats**: {postcode} {plaats}")
+               f"**Naam**: {voorletters}\n"
+               f"**Adres**: {straatnaam}\n"
+               f"**Postcode en Plaats**: {postcode}")
 
     # Dropdown-keuze
     keuze = st.selectbox("📌 Kies een categorie:", ["Optie A", "Optie B", "Optie C"])
