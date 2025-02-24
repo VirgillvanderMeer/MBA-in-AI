@@ -50,9 +50,9 @@ if st.sidebar.button("Opslaan"):
     st.markdown(f"""
     ✅ **Opgeslagen gegevens:**  
 
-{voorletters}  
-{straatnaam}  
-{postcode}  
+    **Naam:** {voorletters}  
+    **Adres:** {straatnaam}  
+    **Postcode en Plaats:** {postcode_clean} {plaats}  
     """)
 
     # Dropdown-keuze
