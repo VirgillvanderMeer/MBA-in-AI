@@ -13,9 +13,9 @@ with st.sidebar:
     st.header("🔍 Invoer gegevens")
 
 # Invoervelden in de sidebar met placeholder-tekst
-voorletters = st.sidebar.text_input("Voorletter(s) + Achternaam", placeholder="J. de Vries")
-straatnaam = st.sidebar.text_input("Straatnaam + Huisnummer", placeholder="Hoofdstraat 12")
-postcode = st.sidebar.text_input("Postcode + Plaats", placeholder="1234 AB, Amsterdam")
+voorletters = st.sidebar.text_input(placeholder="Voorletter(s) + achternaam")
+straatnaam = st.sidebar.text_input(placeholder="Straatnaam + huisnummer")
+postcode = st.sidebar.text_input(placeholder="Postcode + plaats")
 
 # Opslaan-knop
 if st.sidebar.button("Opslaan"):
