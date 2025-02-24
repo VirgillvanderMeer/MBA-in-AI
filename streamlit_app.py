@@ -1,7 +1,7 @@
 import streamlit as st
 
-st.title("Mijn Streamlit App")
-st.write("Dit is een testapp om te deployen via Streamlit Cloud.")
+st.title("De juridische briefassistent App")
+st.write("Genereer eenvoudig je beslissing op bezwaar.")
 
 naam = st.text_input("Wat is je naam?")
 if naam:
