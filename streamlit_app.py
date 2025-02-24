@@ -23,7 +23,7 @@ st.sidebar.markdown("""
         
         /* Verwijder extra padding in de invoervelden */
         div[data-testid="stTextInput"] {
-            margin-bottom: -15px !important; /* Verklein de ruimte tussen invoervelden */
+            margin-bottom: -55px !important; /* Verklein de ruimte tussen invoervelden */
         }
         
         /* Verwijder ongewenste extra witruimte */
