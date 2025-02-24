@@ -3,9 +3,7 @@ import streamlit as st
 st.title("De Juridische Briefhulp ⚖️✍️📜")
 st.write("Genereer eenvoudig de Beslissing op bezwaar. ✅🔄🤝🚀")
 
-naam = st.text_input("Typ of plak hier het Bezwaarschrift")
-if naam:
-    st.write(f"Hallo, {naam}! 🎉")
+naam = st.text_area("Typ of plak hier het Bezwaarschrift", height=300)
 
 if st.button("Klik hier"):
     st.success("Je hebt op de knop geklikt!")
