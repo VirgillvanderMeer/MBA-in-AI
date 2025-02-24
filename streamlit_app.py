@@ -28,7 +28,7 @@ st.sidebar.markdown("""
         
         /* Verwijder ongewenste extra witruimte */
         section[data-testid="stSidebar"] div {
-            padding-bottom: 15px !important;
+            padding-bottom: 0px !important;
         }
     </style>
 """, unsafe_allow_html=True)
