@@ -3,7 +3,7 @@ import streamlit as st
 st.title("De Juridische Briefhulp ⚖️✍️📜")
 st.write("Genereer eenvoudig de Beslissing op bezwaar. ✅🔄🤝🚀")
 
-naam = st.text_input("Voorletter(s) + Achternaam")
+naam = st.text_input("Typ of plak hier het Bezwaarschrift")
 if naam:
     st.write(f"Hallo, {naam}! 🎉")
 
