@@ -41,12 +41,3 @@ if st.sidebar.button("Opslaan"):
     # Knop
     submit = st.button("🚀 Verstuur")
 
-# Resultaten weergeven als gebruiker op de knop klikt
-if submit:
-    st.success(f"Hallo {naam}, je hebt {keuze} gekozen en bent {leeftijd} jaar oud.")
-    if akkoord:
-        st.info("Bedankt voor het akkoord gaan met de voorwaarden!")
-    else:
-        st.warning("Je moet akkoord gaan met de voorwaarden.")
-
-
