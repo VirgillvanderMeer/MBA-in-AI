@@ -12,10 +12,10 @@ if st.button("Klik hier"):
 with st.sidebar:
     st.header("🔍 Invoer gegevens")
 
-# Invoervelden in de sidebar met placeholder-tekst
-voorletters = st.sidebar.text_input(placeholder="Voorletter(s) + achternaam")
-straatnaam = st.sidebar.text_input(placeholder="Straatnaam + huisnummer")
-postcode = st.sidebar.text_input(placeholder="Postcode + plaats")
+# Invoervelden in de sidebar zonder titels, alleen placeholders
+voorletters = st.sidebar.text_input("", placeholder="Voorletter(s) + Achternaam")
+straatnaam = st.sidebar.text_input("", placeholder="Straatnaam + Huisnummer")
+postcode = st.sidebar.text_input("", placeholder="Postcode + Plaats")
 
 # Opslaan-knop
 if st.sidebar.button("Opslaan"):
