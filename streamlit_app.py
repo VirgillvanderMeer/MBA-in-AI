@@ -1,7 +1,7 @@
 import streamlit as st
 
-st.title("De Juridische Briefhulp")
-st.write("Genereer eenvoudig je beslissing op bezwaar.")
+st.title("De Juridische Briefhulp ⚖️✍️📜")
+st.write("Genereer eenvoudig je Beslissing op bezwaar. ✅🤝")
 
 naam = st.text_input("Wat is je naam?")
 if naam:
@@ -12,7 +12,7 @@ if st.button("Klik hier"):
 
 # Sidebar (left)
 with st.sidebar:
-    st.header("🔍 Filters & Invoer")
+    st.header("🔍 Invoer gegevens")
     
     # Tekstinvoer
     naam = st.text_input("👤 Voer je naam in:")
