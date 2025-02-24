@@ -15,9 +15,7 @@ with st.sidebar:
     st.header("🔍 Invoer gegevens")
     
     # Tekstinvoer
-    naam = st.text_input("👤 Voorletters + naam
-    Straat + huisnummer
-    Plaats:")
+    naam = st.text_input("👤 Voorletters + Achternaam")
 
     # Dropdown-keuze
     keuze = st.selectbox("📌 Kies een categorie:", ["Optie A", "Optie B", "Optie C"])
