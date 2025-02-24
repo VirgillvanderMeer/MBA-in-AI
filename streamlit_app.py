@@ -38,6 +38,9 @@ voorletters = st.sidebar.text_input("", placeholder="Voorletter(s) + achternaam"
 straatnaam = st.sidebar.text_input("", placeholder="Straatnaam + huisnummer")
 postcode = st.sidebar.text_input("", placeholder="Postcode + plaats")
 
+# Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
+st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
+
 # Opslaan-knop
 if st.sidebar.button("Opslaan"):
     st.markdown(f"""
