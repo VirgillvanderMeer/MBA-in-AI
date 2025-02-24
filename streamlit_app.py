@@ -25,9 +25,6 @@ if st.sidebar.button("Opslaan"):
                f"**Naam**: {voorletters} {achternaam}\n"
                f"**Adres**: {straatnaam} {huisnummer}\n"
                f"**Postcode en Plaats**: {postcode} {plaats}")
-    
-    # Tekstinvoer
-    naam = st.text_input("👤 Voorletters + Achternaam")
 
     # Dropdown-keuze
     keuze = st.selectbox("📌 Kies een categorie:", ["Optie A", "Optie B", "Optie C"])
