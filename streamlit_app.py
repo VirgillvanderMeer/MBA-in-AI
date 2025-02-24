@@ -14,7 +14,7 @@ if st.button("Klik hier"):
 with st.sidebar:
     st.header("🔍 Invoer gegevens")
 
-    # Keuzemenu
+# Keuzemenu
 keuze = st.selectbox(
     "Welke gegevens wil je invoeren?",
     ["Voorletter(s) + Achternaam", "Straatnaam + Huisnummer", "Postcode + Plaats"]
