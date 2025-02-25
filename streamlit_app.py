@@ -20,6 +20,11 @@ st.sidebar.markdown("""
             margin-bottom: 0px;  /* Negatieve marge om velden dichter op elkaar te zetten */
             padding-bottom: 0px;
         }
+
+        /* Verwijder extra padding in de invoervelden */
+        div[data-testid="stSelectbox"] {
+            margin-bottom: -40px !important; /* Verklein de ruimte tussen invoervelden */
+        }
         
         /* Verwijder extra padding in de invoervelden */
         div[data-testid="stTextInput"] {
