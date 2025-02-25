@@ -53,42 +53,21 @@ elif keuze == "Rechtspersoon 💼":
 
 zaaknummer = st.sidebar.text_input("", placeholder="Zaaknummer (bijv. JB.24.010802.001)")
 
+def is_valid_zaaknummer(zaaknummer):
+    pattern = r"^(JB|WO)\.(1[8-9]|2[0-9]|30)\.\d{6}\.\d{3}$"
+    return bool(re.match(pattern, zaaknummer))
+
 # Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
 
-# Opslaan-knop
 if st.sidebar.button("Opslaan"):
-    # Postcode en plaats splitsen (ervan uitgaande dat er een spatie tussen zit)
-    parts = postcode.split(" ", 1)
-    postcode_clean = parts[0] if len(parts) > 0 else ""
-    plaats = parts[1].upper() if len(parts) > 1 else ""  # Zet plaatsnaam in hoofdletters
-
-    output = "✅ **Opgeslagen gegevens:**\n\n"
-
+    output = "✅ **Opgeslagen gegevens:**\n"
     if keuze == "Rechtspersoon 💼" and onderneming.strip():
         output += f"Naam onderneming: {onderneming}\n"
-    elif keuze == "Rechtspersoon 💼":
-        st.warning("Vul de naam van de onderneming in.")
     else:
         output += "Natuurlijk persoon\n"
-        
-    if voorletters:
-        output += f"Voorletter(s) + achternaam: {voorletters}\n"
-    if straatnaam:
-        output += f"Straatnaam + huisnummer: {straatnaam}\n"
-    if postcode_clean and plaats:
-        output += f"Postcode en plaats: {postcode_clean} {plaats}\n"
-    if zaaknummer:
-        output += f"Zaaknummer: {zaaknummer}\n"
-
-    if not output.strip():
-        st.warning("Geen gegevens om op te slaan.")
-    else:
-        st.markdown(output)
-
-    def is_valid_zaaknummer(zaaknummer):
-        pattern = r"^(JB|WO)\.(1[8-9]|2[0-9]|30)\.\d{6}\.\d{3}$"
-        return bool(re.match(pattern, zaaknummer))
+    output += f"Zaaknummer: {zaaknummer}\n"
+    st.markdown(output)
 
     if st.button("Klik hier"):
         if not naam.strip():
