@@ -56,6 +56,10 @@ elif keuze == "Rechtspersoon 💼":
     straatnaam = st.sidebar.text_input("", placeholder="Straatnaam + huisnummer 🏡")
     postcode = st.sidebar.text_input("", placeholder="Postcode + plaats 📬")
 
+def is_valid_zaaknummer(zaaknummer):
+    pattern = r"^(JB|WO)\.(18|19|20|21|22|23|24|25|26|27|28|29|30)\.\d{6}\.\d{3}$"
+    return bool(re.match(pattern, zaaknummer))
+    
 # Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
 
