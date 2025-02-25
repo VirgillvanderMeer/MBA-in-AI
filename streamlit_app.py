@@ -5,10 +5,14 @@ st.write("Genereer eenvoudig de Beslissing op bezwaar. ✅🔄🤝🚀")
 
 naam = st.text_area("Typ of plak hier het Bezwaarschrift", height=300)
 
+def is_valid_zaaknummer(zaaknummer):
+    pattern = r"^(JB|WO)\.(1[8-9]|2[0-9]|30)\.\d{6}\.\d{3}$"
+    return bool(re.match(pattern, zaaknummer))
+
 if st.button("Klik hier"):
     if not naam.strip():
         st.warning("Vul eerst het bezwaarschrift in voordat je verder gaat.")
-    elif not is_valid_zaaknummer(zaaknummer):
+    elif zaaknummer and not is_valid_zaaknummer(zaaknummer):
         st.error("Vul een geldig zaaknummer in volgens het patroon JB.24.010802.001 of WO.18.123456.123")
     else:
         st.success("Je Bob zit in de oven...🧑‍🍳🔥🔥...en is bijna klaar! 🍩🍰🍕")
@@ -43,10 +47,6 @@ st.sidebar.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-def is_valid_zaaknummer(zaaknummer):
-    pattern = r"^(JB|WO)\.(1[8-9]|2[0-9]|30)\.\d{6}\.\d{3}$"
-    return bool(re.match(pattern, zaaknummer))
-
 # Dropdown-keuze
 keuze = st.sidebar.selectbox("", ["Natuurlijk persoon 👤", "Rechtspersoon 💼"])
 
@@ -63,7 +63,7 @@ elif keuze == "Rechtspersoon 💼":
     postcode = st.sidebar.text_input("", placeholder="Postcode + plaats 📬")
 
 zaaknummer = st.sidebar.text_input("", placeholder="Zaaknummer (bijv. JB.24.010802.001)")
-    
+
 # Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
 
