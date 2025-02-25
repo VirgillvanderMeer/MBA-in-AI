@@ -59,6 +59,9 @@ elif keuze == "Rechtspersoon 💼":
 def is_valid_zaaknummer(zaaknummer):
     pattern = r"^(JB|WO)\.(18|19|20|21|22|23|24|25|26|27|28|29|30)\.\d{6}\.\d{3}$"
     return bool(re.match(pattern, zaaknummer))
+
+naam = st.text_area("Typ of plak hier het Bezwaarschrift", height=300)
+zaaknummer = st.text_input("Vul hier het zaaknummer in (bijv. JB.24.010802.001)")
     
 # Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
