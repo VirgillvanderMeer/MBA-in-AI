@@ -65,6 +65,7 @@ if st.sidebar.button("Opslaan"):
     st.markdown(f"""
     ✅ **Opgeslagen gegevens:**  
 
+    {onderneming}
     {voorletters}  
     {straatnaam}  
     {postcode_clean} {plaats}  
