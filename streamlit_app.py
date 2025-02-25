@@ -15,7 +15,7 @@ if st.button("Klik hier"):
     elif not zaaknummer:
         st.warning("Vul een zaaknummer in.")
     elif not is_valid_zaaknummer(zaaknummer):
-        st.error("Vul een geldig zaaknummer in volgens het patroon JB.24.010802.001 of WO.18.123456.123")
+        st.warning("Vul een geldig zaaknummer in volgens het patroon JB.24.010802.001 of WO.18.123456.123")
     else:
         st.success("Je Bob zit in de oven...🧑‍🍳🔥🔥...en is bijna klaar! 🍩🍰🍕")
 
