@@ -41,6 +41,10 @@ st.sidebar.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+def is_valid_zaaknummer(zaaknummer):
+    pattern = r"^(JB|WO)\.(1[8-9]|2[0-9]|30)\.\d{6}\.\d{3}$"
+    return bool(re.match(pattern, zaaknummer))
+
 # Dropdown-keuze
 keuze = st.sidebar.selectbox("", ["Natuurlijk persoon 👤", "Rechtspersoon 💼"])
 
@@ -56,12 +60,7 @@ elif keuze == "Rechtspersoon 💼":
     straatnaam = st.sidebar.text_input("", placeholder="Straatnaam + huisnummer 🏡")
     postcode = st.sidebar.text_input("", placeholder="Postcode + plaats 📬")
 
-def is_valid_zaaknummer(zaaknummer):
-    pattern = r"^(JB|WO)\.(1[8-9]|2[0-9]|30)\.\d{6}\.\d{3}$"
-    return bool(re.match(pattern, zaaknummer))
-
-naam = st.text_area("Typ of plak hier het Bezwaarschrift", height=300)
-zaaknummer = st.text_input("Vul hier het zaaknummer in (bijv. JB.24.010802.001)")
+zaaknummer = st.sidebar.text_input("", placeholder="Zaaknummer (bijv. JB.24.010802.001)")
     
 # Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
