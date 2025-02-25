@@ -34,7 +34,7 @@ st.sidebar.markdown("""
 """, unsafe_allow_html=True)
 
 # Invoervelden in de sidebar zonder labels, alleen placeholders
-voorletters = st.sidebar.text_input("", placeholder="Voorletter(s) + achternaam")
+voorletters = st.sidebar.text_input("", placeholder="Voorletter(s) + achternaam 👤")
 straatnaam = st.sidebar.text_input("", placeholder="Straatnaam + huisnummer 🏡")
 postcode = st.sidebar.text_input("", placeholder="Postcode + plaats 📬")
 
