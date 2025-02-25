@@ -53,10 +53,6 @@ elif keuze == "Rechtspersoon 💼":
 
 zaaknummer = st.sidebar.text_input("", placeholder="Zaaknummer (bijv. JB.24.010802.001)")
 
-def is_valid_zaaknummer(zaaknummer):
-    pattern = r"^(JB|WO)\.(1[8-9]|2[0-9]|30)\.\d{6}\.\d{3}$"
-    return bool(re.match(pattern, zaaknummer))
-
 # Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
 
@@ -69,9 +65,13 @@ if st.sidebar.button("Opslaan"):
     output += f"Zaaknummer: {zaaknummer}\n"
     st.markdown(output)
 
-    if st.button("Klik hier"):
-        if not naam.strip():
-            st.warning("Vul eerst het bezwaarschrift in voordat je verder gaat.")
+def is_valid_zaaknummer(zaaknummer):
+    pattern = r"^(JB|WO)\.(1[8-9]|2[0-9]|30)\.\d{6}\.\d{3}$"
+    return bool(re.match(pattern, zaaknummer))
+
+if st.button("Klik hier"):
+    if not naam.strip():
+        st.warning("Vul eerst het bezwaarschrift in voordat je verder gaat.")
     elif not is_valid_zaaknummer(zaaknummer):
         st.warning("Vul een geldig zaaknummer in volgens het patroon JB.24.010802.001 of WO.18.123456.123")
     else:
