@@ -73,19 +73,21 @@ if st.sidebar.button("Opslaan"):
     parts = postcode.split(" ", 1)
     postcode_clean = parts[0] if len(parts) > 0 else ""
     plaats = parts[1].upper() if len(parts) > 1 else ""  # Zet plaatsnaam in hoofdletters
-    st.markdown(f"""
-    ✅ **Opgeslagen gegevens:**  
+
+    output = "✅ **Opgeslagen gegevens:**\n\n"
 
     if onderneming:
-        st.markdown(f"Naam onderneming: {onderneming}")
+        output += f"Naam onderneming: {onderneming}\n"
     if voorletters:
-        st.markdown(f"Voorletter(s) + achternaam: {voorletters}")
+        output += f"Voorletter(s) + achternaam: {voorletters}\n"
     if straatnaam:
-        st.markdown(f"Straatnaam + huisnummer: {straatnaam}")
+        output += f"Straatnaam + huisnummer: {straatnaam}\n"
     if postcode_clean and plaats:
-        st.markdown(f"Postcode en plaats: {postcode_clean} {plaats}")
+        output += f"Postcode en plaats: {postcode_clean} {plaats}\n"
     if zaaknummer:
-        st.markdown(f"Zaaknummer: {zaaknummer}")
+        output += f"Zaaknummer: {zaaknummer}\n"
+
+    st.markdown(output)
 
     # Checkbox
     akkoord = st.checkbox("✅ Ga akkoord met de voorwaarden")
