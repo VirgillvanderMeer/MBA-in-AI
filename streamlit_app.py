@@ -33,6 +33,8 @@ st.sidebar.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# Dropdown-keuze
+keuze = st.selectbox("📌 Kies een categorie:", ["Natuurlijk persoon", "Rechtspersoon"])
 # Invoervelden in de sidebar zonder labels, alleen placeholders
 voorletters = st.sidebar.text_input("", placeholder="Voorletter(s) + achternaam 👤")
 straatnaam = st.sidebar.text_input("", placeholder="Straatnaam + huisnummer 🏡")
