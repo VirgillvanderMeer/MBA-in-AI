@@ -76,11 +76,16 @@ if st.sidebar.button("Opslaan"):
     st.markdown(f"""
     ✅ **Opgeslagen gegevens:**  
 
-    {onderneming if onderneming else ''}  
-    {voorletters}  
-    {straatnaam}  
-    {postcode_clean} {plaats}
-    """)
+    if onderneming:
+        st.markdown(f"Naam onderneming: {onderneming}")
+    if voorletters:
+        st.markdown(f"Voorletter(s) + achternaam: {voorletters}")
+    if straatnaam:
+        st.markdown(f"Straatnaam + huisnummer: {straatnaam}")
+    if postcode_clean and plaats:
+        st.markdown(f"Postcode en plaats: {postcode_clean} {plaats}")
+    if zaaknummer:
+        st.markdown(f"Zaaknummer: {zaaknummer}")
 
     # Checkbox
     akkoord = st.checkbox("✅ Ga akkoord met de voorwaarden")
