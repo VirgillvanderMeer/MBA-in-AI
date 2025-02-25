@@ -64,9 +64,9 @@ if st.sidebar.button("Opslaan"):
 
     output = "✅ **Opgeslagen gegevens:**\n\n"
 
-    if persoonstype == "Rechtspersoon" and onderneming.strip():
+    if keuze == "Rechtspersoon 💼" and onderneming.strip():
         output += f"Naam onderneming: {onderneming}\n"
-    elif persoonstype == "Rechtspersoon":
+    elif keuze == "Rechtspersoon 💼":
         st.warning("Vul de naam van de onderneming in.")
     else:
         output += "Natuurlijk persoon\n"
