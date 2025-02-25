@@ -57,7 +57,7 @@ elif keuze == "Rechtspersoon 💼":
     postcode = st.sidebar.text_input("", placeholder="Postcode + plaats 📬")
 
 def is_valid_zaaknummer(zaaknummer):
-    pattern = r"^(JB|WO)\.(18|19|20|21|22|23|24|25|26|27|28|29|30)\.\d{6}\.\d{3}$"
+    pattern = r"^(JB|WO)\.(1[8-9]|2[0-9]|30)\.\d{6}\.\d{3}$"
     return bool(re.match(pattern, zaaknummer))
 
 naam = st.text_area("Typ of plak hier het Bezwaarschrift", height=300)
