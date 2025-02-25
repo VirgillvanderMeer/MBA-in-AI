@@ -78,8 +78,10 @@ if st.sidebar.button("Opslaan"):
 
     output = "✅ **Opgeslagen gegevens:**\n\n"
 
-    if onderneming:
+    if onderneming.strip():
         output += f"Naam onderneming: {onderneming}\n"
+    else:
+        output += "Geen onderneming opgegeven (natuurlijk persoon)\n"
     if voorletters:
         output += f"Voorletter(s) + achternaam: {voorletters}\n"
     if straatnaam:
