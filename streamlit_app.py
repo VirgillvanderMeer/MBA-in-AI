@@ -6,7 +6,10 @@ st.write("Genereer eenvoudig de Beslissing op bezwaar. ✅🔄🤝🚀")
 naam = st.text_area("Typ of plak hier het Bezwaarschrift", height=300)
 
 if st.button("Klik hier"):
-    st.success("Je Bob zit in de oven...🧑‍🍳🔥🔥...en is bijna klaar! 🍩🍰🍕")
+    if naam.strip():  # Controleert of het tekstveld niet leeg is
+        st.success("Je Bob zit in de oven...🧑‍🍳🔥🔥...en is bijna klaar! 🍩🍰🍕")
+    else:
+        st.warning("Vul eerst het bezwaarschrift in voordat je verder gaat.")
 
 # Sidebar (left)
 with st.sidebar:
