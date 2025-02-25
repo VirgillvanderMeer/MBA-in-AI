@@ -71,9 +71,6 @@ if st.sidebar.button("Opslaan"):
     {postcode_clean} {plaats}  
     """)
 
-    # Dropdown-keuze
-    keuze = st.selectbox("📌 Kies een categorie:", ["Optie A", "Optie B", "Optie C"])
-
     # Checkbox
     akkoord = st.checkbox("✅ Ga akkoord met de voorwaarden")
 
