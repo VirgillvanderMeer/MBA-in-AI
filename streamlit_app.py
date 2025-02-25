@@ -76,10 +76,10 @@ if st.sidebar.button("Opslaan"):
     st.markdown(f"""
     ✅ **Opgeslagen gegevens:**  
 
-    {'Naam onderneming: ' + onderneming if onderneming else ''}  
-    Voorletter(s) + achternaam: {voorletters}  
-    Straatnaam + huisnummer: {straatnaam}  
-    Postcode en plaats: {postcode_clean} {plaats}
+    {onderneming if onderneming else ''}  
+    {voorletters}  
+    {straatnaam}  
+    {postcode_clean} {plaats}
     """)
 
     # Checkbox
