@@ -78,10 +78,13 @@ if st.sidebar.button("Opslaan"):
 
     output = "✅ **Opgeslagen gegevens:**\n\n"
 
-    if onderneming.strip():
+    if persoonstype == "Rechtspersoon" and onderneming.strip():
         output += f"Naam onderneming: {onderneming}\n"
+    elif persoonstype == "Rechtspersoon":
+        st.warning("Vul de naam van de onderneming in.")
     else:
-        output += "Geen onderneming opgegeven (natuurlijk persoon)\n"
+        output += "Natuurlijk persoon\n"
+        
     if voorletters:
         output += f"Voorletter(s) + achternaam: {voorletters}\n"
     if straatnaam:
@@ -91,7 +94,10 @@ if st.sidebar.button("Opslaan"):
     if zaaknummer:
         output += f"Zaaknummer: {zaaknummer}\n"
 
-    st.markdown(output)
+    if not output.strip():
+        st.warning("Geen gegevens om op te slaan.")
+    else:
+        st.markdown(output)
 
     # Checkbox
     akkoord = st.checkbox("✅ Ga akkoord met de voorwaarden")
