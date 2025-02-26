@@ -47,8 +47,6 @@ st.sidebar.markdown("""
 # Dropdown-keuze
 keuze = st.sidebar.selectbox("", ["Natuurlijk persoon 👤", "Rechtspersoon 💼"])
 
-st.write(f"Je hebt gekozen voor: **{keuze}**")
-
 # Invoervelden in de sidebar zonder labels, alleen placeholders
 if keuze == "Natuurlijk persoon 👤":
     voorletters = st.sidebar.text_input("", placeholder="Voorletter(s) + achternaam 👤")
