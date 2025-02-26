@@ -73,6 +73,12 @@ maanden = {
 uitgeschreven_datums = [f"{d.day} {maanden[d.month]} {d.year}" for d in datums]
 boetedatum = st.sidebar.date_input("👮‍♀️📆 Kies de boetedatum", value=datetime.date.today())
 
+# Standaarddatum instellen (vandaag in DD-MM-YYYY)
+standaard_datum = datetime.date.today().strftime("%d-%m-%Y")
+
+# Tekstinvoer voor datum
+boetedatum = st.sidebar.text_input("👮‍♀️📆 Voer de boetedatum in (DD-MM-YYYY)", standaard_datum)
+
 # Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
 
