@@ -15,34 +15,32 @@ st.sidebar.markdown("""
     <style>
         /* Verwijder de standaard marges tussen invoervelden */
         div[data-testid="stSidebar"] div[data-testid="stVerticalBlock"] > div {
-            margin-bottom: 0px;  /* Negatieve marge om velden dichter op elkaar te zetten */
+            margin-bottom: 0px;
             padding-bottom: 0px;
         }
 
         /* Verwijder extra padding in de invoervelden */
         div[data-testid="stSelectbox"] {
-            margin-bottom: -40px !important; /* Verklein de ruimte tussen invoervelden */
+            margin-bottom: -40px !important;
         }
         
-        /* Verwijder extra padding in de invoervelden */
         div[data-testid="stTextInput"] {
-            margin-bottom: -40px !important; /* Verklein de ruimte tussen invoervelden */
+            margin-bottom: -40px !important;
         }
         
-        /* Verwijder ongewenste extra witruimte */
         section[data-testid="stSidebar"] div {
             padding-bottom: 0px !important;
-
-            <style>
-        /* Verander de achtergrondkleur van de dropdown-keuzelijst naar donkerblauw */
-        div[data-testid="stSelectbox"] div[role="listbox"] {
-            background-color: #00274D !important; /* Donkerblauw */
-            color: white !important; /* Witte tekst voor contrast */
         }
-        
-        /* Stijl de geselecteerde optie in de dropdown */
-        div[data-testid="stSelectbox"] div[role="listbox"] span {
-            color: white !important;
+
+        /* Verander de achtergrondkleur van de dropdown-keuzelijst naar donkerblauw */
+        div[role="listbox"] {
+            background-color: #00274D !important; /* Donkerblauw */
+        }
+
+        /* Stijl de dropdown-opties */
+        div[role="option"] {
+            color: white !important; /* Witte tekst */
+            font-weight: bold;
         }
     </style>
 """, unsafe_allow_html=True)
