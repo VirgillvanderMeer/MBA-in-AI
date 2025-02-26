@@ -13,33 +13,25 @@ with st.sidebar:
 # CSS om de tussenruimte volledig te verkleinen
 st.sidebar.markdown("""
     <style>
-        /* Algemene dropdown styling */
-        div[data-baseweb="select"] > div {
-            background-color: #00274D !important; /* Donkerblauw achtergrond */
-            color: white !important; /* Witte tekst */
-            border-radius: 5px; /* Afgeronde hoeken */
+        /* Verwijder de standaard marges tussen invoervelden */
+        div[data-testid="stSidebar"] div[data-testid="stVerticalBlock"] > div {
+            margin-bottom: 0px;  /* Negatieve marge om velden dichter op elkaar te zetten */
+            padding-bottom: 0px;
         }
 
-        /* Stijl de tekst van de dropdown opties */
-        div[data-baseweb="popover"] {
-            background-color: #00274D !important; /* Donkerblauw */
-            color: white !important;
-            border-radius: 5px;
-        }
-
-        /* Stijl de geselecteerde optie */
-        div[data-baseweb="select"] span {
-            color: white !important;
-        }
-
-        /* Stijl de hover-kleur van opties */
-        div[data-baseweb="option"]:hover {
-            background-color: #00509E !important; /* Iets lichtere blauw */
-        }
-
-        /* Stijl de rand van de dropdown */
+        /* Verwijder extra padding in de invoervelden */
         div[data-testid="stSelectbox"] {
-            border: 1px solid white !important;
+            margin-bottom: -40px !important; /* Verklein de ruimte tussen invoervelden */
+        }
+        
+        /* Verwijder extra padding in de invoervelden */
+        div[data-testid="stTextInput"] {
+            margin-bottom: -40px !important; /* Verklein de ruimte tussen invoervelden */
+        }
+        
+        /* Verwijder ongewenste extra witruimte */
+        section[data-testid="stSidebar"] div {
+            padding-bottom: 0px !important;
         }
     </style>
 """, unsafe_allow_html=True)
