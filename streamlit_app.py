@@ -53,7 +53,7 @@ elif keuze == "Rechtspersoon 💼":
 
 zaaknummer = st.sidebar.text_input("", placeholder="Zaaknummer 📂 (JB.25.123456.001)")
 jurist = st.sidebar.text_input("", placeholder="Naam jurist + e-mail 📧")
-bijlage(n) = st.sidebar.text_input("", placeholder="Bijlage(n) 📎")
+bijlage = st.sidebar.text_input("", placeholder="Bijlage(n) 📎")
 
 # Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
