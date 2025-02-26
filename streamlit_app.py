@@ -51,7 +51,7 @@ elif keuze == "Rechtspersoon 💼":
     straatnaam = st.sidebar.text_input("", placeholder="Straatnaam + huisnummer 🏡")
     postcode = st.sidebar.text_input("", placeholder="Postcode + plaats 📬")
 
-zaaknummer = st.sidebar.text_input("", placeholder="Zaaknummer (bijv. JB.24.010802.001)")
+zaaknummer = st.sidebar.text_input("", placeholder="Zaaknummer 📂 (JB.25.123456.001)")
 
 # Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
@@ -73,7 +73,7 @@ if st.button("Klik hier"):
     if not naam.strip():
         st.warning("Vul eerst het bezwaarschrift in voordat je verder gaat.")
     elif not is_valid_zaaknummer(zaaknummer):
-        st.warning("Vul een geldig zaaknummer in volgens het patroon JB.24.010802.001 of WO.18.123456.123")
+        st.warning("Vul een geldig zaaknummer in volgens het patroon JB.25.123456.001 of WO.25.123456.001")
     else:
         st.success("Je Bob zit in de oven...🧑‍🍳🔥🔥...en is bijna klaar! 🍩🍰🍕")
 
