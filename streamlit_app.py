@@ -32,6 +32,17 @@ st.sidebar.markdown("""
         /* Verwijder ongewenste extra witruimte */
         section[data-testid="stSidebar"] div {
             padding-bottom: 0px !important;
+
+            <style>
+        /* Verander de achtergrondkleur van de dropdown-keuzelijst naar donkerblauw */
+        div[data-testid="stSelectbox"] div[role="listbox"] {
+            background-color: #00274D !important; /* Donkerblauw */
+            color: white !important; /* Witte tekst voor contrast */
+        }
+        
+        /* Stijl de geselecteerde optie in de dropdown */
+        div[data-testid="stSelectbox"] div[role="listbox"] span {
+            color: white !important;
         }
     </style>
 """, unsafe_allow_html=True)
