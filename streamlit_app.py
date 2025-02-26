@@ -56,10 +56,7 @@ zaaknummer = st.sidebar.text_input("", placeholder="Zaaknummer 📂 (JB.25.12345
 jurist = st.sidebar.text_input("", placeholder="Naam jurist + e-mail 📧")
 bijlage = st.sidebar.text_input("", value="Boetebesluit met instructies", placeholder="Bijlage(n) 📎")
 boetedatum = st.sidebar.text_input("", placeholder="Boetedatum 👮‍♀️📆")
-boetedatum = st.date_input("📅 Kies de boetedatum", value=datetime.date.today())
-
-st.write(f"📅 Geselecteerde boetedatum: **{boetedatum}**")
-
+boetedatum = st.sidebar.date_input("👮‍♀️📆 Kies de boetedatum", value=datetime.date.today())
 
 # Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
