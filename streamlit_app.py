@@ -52,6 +52,7 @@ elif keuze == "Rechtspersoon 💼":
     postcode = st.sidebar.text_input("", placeholder="Postcode + plaats 📬")
 
 zaaknummer = st.sidebar.text_input("", placeholder="Zaaknummer 📂 (JB.25.123456.001)")
+jurist = st.sidebar.text_input("", placeholder="Naam jurist + e-mail 📧")
 
 # Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
@@ -79,9 +80,6 @@ if st.button("Klik hier"):
 
     # Checkbox
     akkoord = st.checkbox("✅ Ga akkoord met de voorwaarden")
-
-    # Schuifregelaar
-    leeftijd = st.slider("🎂 Kies je leeftijd", 18, 100, 25)
 
     # Knop
     submit = st.button("🚀 Verstuur")
