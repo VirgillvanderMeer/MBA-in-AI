@@ -111,7 +111,7 @@ if st.button("🚀 Verstuur"):
 
         # Toon de JSON-response
         if response.status_code == 200:
-            st.success(f"✅ API-response: {response.json()}")
+            replacements = response.json()
+            st.success(f"✅ API-response ontvangen: {replacements}")  # Geeft de volledige JSON terug
         else:
             st.error("❌ Er is iets misgegaan met de API.")
-
