@@ -15,21 +15,6 @@ if st.button("Verstuur naar Flask API"):
     else:
         st.error("Er is iets misgegaan met de API!")
 
-# CSS om de achtergrond correct weer te geven
-page_bg_img = f"""
-<style>
-body {{
-    background: url("{background_image_url}") no-repeat center center fixed;
-    background-size: cover;
-    background-color: #cccccc; /* Zorg ervoor dat je iets ziet als de afbeelding niet laadt */
-}}
-</style>
-"""
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
-# Injecteer CSS in Streamlit
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
 st.title("LegalCheck: De Briefhulp ⚖️✍️📜")
 st.write("Genereer eenvoudig de Beslissing op bezwaar. 🔄🤝🚀")
 
