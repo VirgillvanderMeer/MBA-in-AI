@@ -16,11 +16,7 @@ body {{
 }}
 </style>
 """
-
 st.markdown(page_bg_img, unsafe_allow_html=True)
-
-st.title("Achtergrondafbeelding vanuit GitHub")
-st.write("Als je een witte achtergrond ziet, check dan je afbeelding-URL.")
 
 # Injecteer CSS in Streamlit
 st.markdown(page_bg_img, unsafe_allow_html=True)
