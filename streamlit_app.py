@@ -4,21 +4,6 @@ import datetime
 from PIL import Image
 import requests
 
-# Gebruikersinvoer voor voorletters en achternaam
-voorletters = st.sidebar.text_input("", placeholder="Voorletter(s) + achternaam 👤")
-
-# Verstuur data naar de Flask API
-if st.button("🚀 Verstuur"):
-    api_url = "http://127.0.0.1:5000/genereer_brief"
-    response = requests.post(api_url, json={"voorletters": voorletters, "achternaam": achternaam})
-
-    if response.status_code == 200:
-        replacements = response.json()
-        st.success(f"Briefgegevens gegenereerd: {replacements}")
-    else:
-        st.error("Er is iets misgegaan met de API.")
-
-
 st.title("LegalCheck: De Briefhulp ⚖️✍️📜")
 st.write("Genereer eenvoudig de Beslissing op bezwaar. 🔄🤝🚀")
 
@@ -115,3 +100,14 @@ if st.button("🚀 Verstuur"):
         st.warning("Vul een geldig zaaknummer in volgens het patroon JB.25.123456.001 of WO.25.123456.001")
     else:
         st.success("Je Bob zit in de oven...🧑‍🍳🥖🔥🔥...en is bijna klaar! 🍩🍰🍕")
+
+# Verstuur data naar de Flask API
+if st.button("🚀 Verstuur"):
+    api_url = "http://127.0.0.1:5000/genereer_brief"
+    response = requests.post(api_url, json={"voorletters": voorletters, "achternaam": achternaam})
+
+    if response.status_code == 200:
+        replacements = response.json()
+        st.success(f"Briefgegevens gegenereerd: {replacements}")
+    else:
+        st.error("Er is iets misgegaan met de API.")
