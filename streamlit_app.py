@@ -83,8 +83,8 @@ if st.sidebar.button("Opslaan"):
     if keuze == "Rechtspersoon 💼" and onderneming.strip():
         output += f"Naam onderneming: {onderneming}\n"
     else:
-        output += "Natuurlijk persoon\n"
-    output += f"Zaaknummer: {zaaknummer}\n"
+        output += "\n"
+    output += f" {zaaknummer}\n"
     st.markdown(output)
 
 def is_valid_zaaknummer(zaaknummer):
