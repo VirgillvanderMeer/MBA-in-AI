@@ -104,7 +104,7 @@ if st.button("🚀 Verstuur"):
 
         # API-aanroep alleen als validatie slaagt
         api_url = "http://127.0.0.1:5000/genereer_brief"
-        response = requests.post(api_url, json={"voorletters": voorletters, "achternaam": achternaam})
+        response = requests.post(api_url, json={"voorletters": voorletters})
 
         if response.status_code == 200:
             replacements = response.json()
