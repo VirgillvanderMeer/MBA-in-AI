@@ -2,6 +2,10 @@ import streamlit as st
 import re
 import datetime
 from PIL import Image
+import requests
+
+response = requests.get("http://127.0.0.1:5000/keuze?optie=OptieA")
+print(response.json())
 
 # Gebruik de afbeelding uit GitHub (vervang met jouw juiste URL!)
 background_image_url = "https://github.com/VirgillvanderMeer/MBA-in-AI/blob/main/Human_AI.jpg"
