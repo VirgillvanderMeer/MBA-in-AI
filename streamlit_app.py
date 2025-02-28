@@ -3,6 +3,24 @@ import re
 import datetime
 from PIL import Image
 
+# Gebruik de afbeelding uit GitHub (vervang met jouw juiste URL!)
+background_image_url = "https://raw.githubusercontent.com/jouw-gebruikersnaam/jouw-repo/main/Human+AI.jpg"
+
+# CSS instellen voor de achtergrond
+page_bg_img = f"""
+<style>
+body {{
+    background-image: url("{background_image_url}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}}
+</style>
+"""
+
+# Injecteer CSS in Streamlit
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 st.title("LegalCheck: De Briefhulp ⚖️✍️📜")
 st.write("Genereer eenvoudig de Beslissing op bezwaar. 🔄🤝🚀")
 
