@@ -5,7 +5,7 @@ from PIL import Image
 import requests
 
 # Gebruikersinvoer voor voorletters en achternaam
-voorletters = st.text_input(value="")
+voorletters = st.sidebar.text_input(value="")
 
 # Verstuur data naar de Flask API
 if st.button("Genereer brief"):
