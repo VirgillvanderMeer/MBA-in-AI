@@ -119,7 +119,3 @@ body {{
 
 # Injecteer CSS in de Streamlit-app
 st.markdown(page_bg_img, unsafe_allow_html=True)
-
-# Voeg content toe
-st.title("Mijn Streamlit App met Achtergrondafbeelding")
-st.write("De achtergrondafbeelding is succesvol ingesteld!")
