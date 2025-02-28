@@ -5,7 +5,7 @@ from PIL import Image
 import requests
 
 # Gebruikersinvoer voor voorletters en achternaam
-voorletters = st.sidebar.text_input(value="")
+voorletters = st.sidebar.text_input("", placeholder="Voorletter(s) + achternaam 👤")
 
 # Verstuur data naar de Flask API
 if st.button("🚀 Verstuur"):
