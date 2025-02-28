@@ -8,7 +8,7 @@ import requests
 voorletters = st.sidebar.text_input(value="")
 
 # Verstuur data naar de Flask API
-if st.button("Genereer brief"):
+if st.button("🚀 Verstuur"):
     api_url = "http://127.0.0.1:5000/genereer_brief"
     response = requests.post(api_url, json={"voorletters": voorletters, "achternaam": achternaam})
 
