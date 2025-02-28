@@ -98,3 +98,28 @@ if st.button("🚀 Verstuur"):
         st.warning("Vul een geldig zaaknummer in volgens het patroon JB.25.123456.001 of WO.25.123456.001")
     else:
         st.success("Je Bob zit in de oven...🧑‍🍳🔥🔥...en is bijna klaar! 🍩🍰🍕")
+
+
+# Pas de pagina-configuratie aan
+st.set_page_config(layout="wide")
+
+# CSS om een achtergrondafbeelding te laden
+background_image_url = "https://a.storyblok.com/f/279289/1960x840/d7c8f20a54/opkomst-van-ai.webp/m/3840x1920"  # Vervang dit met je eigen URL
+
+page_bg_img = f"""
+<style>
+body {{
+    background-image: url("{background_image_url}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}}
+</style>
+"""
+
+# Injecteer CSS in de Streamlit-app
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+# Voeg content toe
+st.title("Mijn Streamlit App met Achtergrondafbeelding")
+st.write("De achtergrondafbeelding is succesvol ingesteld!")
