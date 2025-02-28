@@ -2,7 +2,7 @@ import streamlit as st
 import re
 import datetime
 
-st.title("LegalCheck - De Briefhulp ⚖️✍️📜")
+st.title("LegalCheck: De Briefhulp ⚖️✍️📜")
 st.write("Genereer eenvoudig de Beslissing op bezwaar. ✅🔄🤝🚀")
 
 naam = st.text_area("Typ of plak hier het Bezwaarschrift", height=300)
