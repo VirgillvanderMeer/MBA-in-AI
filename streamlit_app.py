@@ -4,7 +4,7 @@ import datetime
 from PIL import Image
 
 # Gebruik de afbeelding uit GitHub (vervang met jouw juiste URL!)
-background_image_url = "https://raw.githubusercontent.com/jouw-gebruikersnaam/jouw-repo/main/Human+AI.jpg"
+background_image_url = "https://raw.githubusercontent.com/jouw-gebruikersnaam/jouw-repo/main/Human_AI.jpg"
 
 # CSS instellen voor de achtergrond
 page_bg_img = f"""
