@@ -6,17 +6,21 @@ from PIL import Image
 # Gebruik de afbeelding uit GitHub (vervang met jouw juiste URL!)
 background_image_url = "https://github.com/VirgillvanderMeer/MBA-in-AI/blob/main/Human_AI.jpg"
 
-# CSS instellen voor de achtergrond
+# CSS om de achtergrond correct weer te geven
 page_bg_img = f"""
 <style>
 body {{
-    background-image: url("{background_image_url}");
+    background: url("{background_image_url}") no-repeat center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #cccccc; /* Zorg ervoor dat je iets ziet als de afbeelding niet laadt */
 }}
 </style>
 """
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+st.title("Achtergrondafbeelding vanuit GitHub")
+st.write("Als je een witte achtergrond ziet, check dan je afbeelding-URL.")
 
 # Injecteer CSS in Streamlit
 st.markdown(page_bg_img, unsafe_allow_html=True)
