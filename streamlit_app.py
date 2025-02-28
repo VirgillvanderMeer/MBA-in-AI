@@ -103,7 +103,7 @@ if st.button("🚀 Verstuur"):
         st.success("Je Bob zit in de oven...🧑‍🍳🥖🔥🔥...en is bijna klaar! 🍩🍰🍕")
 
         # API-aanroep alleen als validatie slaagt
-        api_url = "http://127.0.0.1:5000/genereer_brief"
+        api_url = "http://127.0.0.1:5000/"
         response = requests.post(api_url, json={"voorletters": voorletters})
 
         if response.status_code == 200:
