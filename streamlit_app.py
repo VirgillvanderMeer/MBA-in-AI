@@ -34,6 +34,11 @@ st.sidebar.markdown("""
         section[data-testid="stSidebar"] div {
             padding-bottom: 0px !important;
         }
+
+    <style>
+        .main {
+            max-width: 1200px; /* Standaard is rond de 700px */
+        }
     </style>
 """, unsafe_allow_html=True)
 
