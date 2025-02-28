@@ -4,11 +4,16 @@ import datetime
 from PIL import Image
 import requests
 
-response = requests.get("http://127.0.0.1:5000/keuze?optie=OptieA")
-print(response.json())
-
-# Gebruik de afbeelding uit GitHub (vervang met jouw juiste URL!)
-background_image_url = "https://github.com/VirgillvanderMeer/MBA-in-AI/blob/main/Human_AI.jpg"
+# API-aanroep knop
+if st.button("Verstuur naar Flask API"):
+    # Stuur een verzoek naar Flask
+    response = requests.get(f"http://127.0.0.1:5000/keuze?optie={optie}")
+    
+    if response.status_code == 200:
+        data = response.json()
+        st.success(data["resultaat"])
+    else:
+        st.error("Er is iets misgegaan met de API!")
 
 # CSS om de achtergrond correct weer te geven
 page_bg_img = f"""
