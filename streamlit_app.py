@@ -4,6 +4,21 @@ import datetime
 from PIL import Image
 import requests
 
+# Gebruikersinvoer voor voorletters en achternaam
+voorletters = st.text_input(value="")
+
+# Verstuur data naar de Flask API
+if st.button("Genereer brief"):
+    api_url = "http://127.0.0.1:5000/genereer_brief"
+    response = requests.post(api_url, json={"voorletters": voorletters, "achternaam": achternaam})
+
+    if response.status_code == 200:
+        replacements = response.json()
+        st.success(f"Briefgegevens gegenereerd: {replacements}")
+    else:
+        st.error("Er is iets misgegaan met de API.")
+
+
 st.title("LegalCheck: De Briefhulp ⚖️✍️📜")
 st.write("Genereer eenvoudig de Beslissing op bezwaar. 🔄🤝🚀")
 
