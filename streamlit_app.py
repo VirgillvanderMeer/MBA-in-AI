@@ -102,12 +102,15 @@ if st.button("🚀 Verstuur"):
     else:
         st.success("Je Bob zit in de oven...🧑‍🍳🥖🔥🔥...en is bijna klaar! 🍩🍰🍕")
 
-        # API-aanroep alleen als validatie slaagt
-        api_url = "http://127.0.0.1:5000/genereer_brief"
-        response = requests.post(api_url, json={"voorletters": voorletters})
+# Data die wordt verstuurd naar Flask
+data = {"voorletters": voorletters}  # Geen aparte achternaam
 
-        if response.status_code == 200:
-            replacements = response.json()
-            st.success(f"✅ Briefgegevens gegenereerd: {replacements}")
-        else:
-            st.error("❌ Er is iets misgegaan met de API.")
+# Stuur een POST-verzoek naar de API
+api_url = "http://127.0.0.1:5000/genereer_brief"
+response = requests.post(api_url, json=data)
+
+# Toon de JSON-response
+if response.status_code == 200:
+    st.success(f"✅ API-response: {response.json()}")
+else:
+    st.error("❌ Er is iets misgegaan met de API.")
