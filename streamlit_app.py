@@ -37,7 +37,7 @@ st.sidebar.markdown("""
 
     <style>
         .main {
-            max-width: 1800px; /* Standaard is rond de 700px */
+            max-width: 2200px; /* Standaard is rond de 700px */
         }
     </style>
 """, unsafe_allow_html=True)
