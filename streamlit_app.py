@@ -93,21 +93,21 @@ def is_valid_zaaknummer(zaaknummer):
     pattern = r"^(JB|WO)\.(1[8-9]|2[0-9]|30)\.\d{6}\.\d{3}$"
     return bool(re.match(pattern, zaaknummer))
 
+# 🚀 Verstuur-knop met validatie en API-aanroep
 if st.button("🚀 Verstuur"):
     if not bezwaarschrift.strip():
-        st.warning("Vul eerst het bezwaarschrift in voordat je verder gaat.")
+        st.warning("⚠ Vul eerst het bezwaarschrift in voordat je verder gaat.")
     elif not is_valid_zaaknummer(zaaknummer):
-        st.warning("Vul een geldig zaaknummer in volgens het patroon JB.25.123456.001 of WO.25.123456.001")
+        st.warning("⚠ Vul een geldig zaaknummer in volgens het patroon JB.25.123456.001 of WO.25.123456.001")
     else:
         st.success("Je Bob zit in de oven...🧑‍🍳🥖🔥🔥...en is bijna klaar! 🍩🍰🍕")
 
-# Verstuur data naar de Flask API
-if st.button("🚀 Verstuur"):
-    api_url = "http://127.0.0.1:5000/genereer_brief"
-    response = requests.post(api_url, json={"voorletters": voorletters, "achternaam": achternaam})
+        # API-aanroep alleen als validatie slaagt
+        api_url = "http://127.0.0.1:5000/genereer_brief"
+        response = requests.post(api_url, json={"voorletters": voorletters, "achternaam": achternaam})
 
-    if response.status_code == 200:
-        replacements = response.json()
-        st.success(f"Briefgegevens gegenereerd: {replacements}")
-    else:
-        st.error("Er is iets misgegaan met de API.")
+        if response.status_code == 200:
+            replacements = response.json()
+            st.success(f"✅ Briefgegevens gegenereerd: {replacements}")
+        else:
+            st.error("❌ Er is iets misgegaan met de API.")
