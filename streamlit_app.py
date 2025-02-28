@@ -3,11 +3,11 @@ import re
 import datetime
 
 st.title("LegalCheck: De Briefhulp ⚖️✍️📜")
-st.write("Genereer eenvoudig de Beslissing op bezwaar. ✅🔄🤝🚀")
+st.write("Genereer eenvoudig de Beslissing op bezwaar. 🔄🤝🚀")
 
-naam = st.text_area("Typ of plak hier de Waarneming van de verballisant", height=300)
+naam = st.text_area("✅ Typ of plak hier de Waarneming van de verballisant", height=200)
 
-naam = st.text_area("Typ of plak hier het Bezwaarschrift", height=300)
+naam = st.text_area("✅ Typ of plak hier het Bezwaarschrift", height=200)
 
 # Sidebar (left)
 with st.sidebar:
