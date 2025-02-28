@@ -24,13 +24,6 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 st.title("LegalCheck: De Briefhulp ⚖️✍️📜")
 st.write("Genereer eenvoudig de Beslissing op bezwaar. 🔄🤝🚀")
 
-# Afbeelding uploaden
-uploaded_file = st.file_uploader("Upload een afbeelding", type=["jpg", "jpeg", "png"])
-
-if uploaded_file is not None:
-    image = Image.open(uploaded_file)
-    st.image(image, caption="Geüploade afbeelding.")
-
 verballisant = st.text_area("✅ Typ of plak hier de Waarneming van de verballisant", height=200)
 bezwaarschrift = st.text_area("✅ Typ of plak hier het Bezwaarschrift", height=200)
 hoorzitting = st.text_area("✅ Typ hier de besproken punten in de Telefonische hoorzitting", height=200)
