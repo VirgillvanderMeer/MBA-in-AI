@@ -5,9 +5,9 @@ import datetime
 st.title("LegalCheck: De Briefhulp ⚖️✍️📜")
 st.write("Genereer eenvoudig de Beslissing op bezwaar. 🔄🤝🚀")
 
-naam = st.text_area("✅ Typ of plak hier de Waarneming van de verballisant", height=200)
-naam = st.text_area("✅ Typ of plak hier het Bezwaarschrift", height=200)
-naam = st.text_area("✅ Typ hier de besproken punten in de Telefonische hoorzitting", height=200)
+verballisant = st.text_area("✅ Typ of plak hier de Waarneming van de verballisant", height=200)
+bezwaarschrift = st.text_area("✅ Typ of plak hier het Bezwaarschrift", height=200)
+hoorzitting = st.text_area("✅ Typ hier de besproken punten in de Telefonische hoorzitting", height=200)
 
 # Sidebar (left)
 with st.sidebar:
@@ -91,17 +91,10 @@ def is_valid_zaaknummer(zaaknummer):
     pattern = r"^(JB|WO)\.(1[8-9]|2[0-9]|30)\.\d{6}\.\d{3}$"
     return bool(re.match(pattern, zaaknummer))
 
-if st.button("Klik hier"):
-    if not naam.strip():
+if st.button("🚀 Verstuur"):
+    if not bezwaarschrift.strip():
         st.warning("Vul eerst het bezwaarschrift in voordat je verder gaat.")
     elif not is_valid_zaaknummer(zaaknummer):
         st.warning("Vul een geldig zaaknummer in volgens het patroon JB.25.123456.001 of WO.25.123456.001")
     else:
         st.success("Je Bob zit in de oven...🧑‍🍳🔥🔥...en is bijna klaar! 🍩🍰🍕")
-
-    # Checkbox
-    akkoord = st.checkbox("✅ Ga akkoord met de voorwaarden")
-
-    # Knop
-    submit = st.button("🚀 Verstuur")
-
