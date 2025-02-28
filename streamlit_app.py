@@ -4,17 +4,6 @@ import datetime
 from PIL import Image
 import requests
 
-# API-aanroep knop
-if st.button("Verstuur naar Flask API"):
-    # Stuur een verzoek naar Flask
-    response = requests.get(f"http://127.0.0.1:5000/keuze?optie={optie}")
-    
-    if response.status_code == 200:
-        data = response.json()
-        st.success(data["resultaat"])
-    else:
-        st.error("Er is iets misgegaan met de API!")
-
 st.title("LegalCheck: De Briefhulp ⚖️✍️📜")
 st.write("Genereer eenvoudig de Beslissing op bezwaar. 🔄🤝🚀")
 
