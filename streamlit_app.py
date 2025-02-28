@@ -64,25 +64,14 @@ bijlage = st.sidebar.text_input("", value="Boetebesluit met instructies", placeh
 # Extra witruimte toevoegen vóór de boetedatum
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
 
-# Lijst met datums genereren (bijvoorbeeld komende 30 dagen)
-vandaag = datetime.date.today()
-datums = [(vandaag + datetime.timedelta(days=i)) for i in range(31)]
-
-# Maandnamen in Nederlands
-maanden = {
-    1: "januari", 2: "februari", 3: "maart", 4: "april", 5: "mei", 6: "juni",
-    7: "juli", 8: "augustus", 9: "september", 10: "oktober", 11: "november", 12: "december"
-}
+# Lijst met uitgeschreven datums
+besluitdatum = st.sidebar.date_input("👮‍♀️📆 Kies de besluitdatum", value=datetime.date.today())
 
 # Lijst met uitgeschreven datums
-uitgeschreven_datums = [f"{d.day} {maanden[d.month]} {d.year}" for d in datums]
-boetedatum = st.sidebar.date_input("👮‍♀️📆 Kies de boetedatum", value=datetime.date.today())
+bezwaardatum = st.sidebar.date_input("✍️📆 Kies de bezwaardatum", value=datetime.date.today())
 
 # Standaarddatum instellen (vandaag in DD-MM-YYYY)
 standaard_datum = datetime.date.today().strftime("%d-%m-%Y")
-
-# Tekstinvoer voor datum
-boetedatum = st.sidebar.text_input("👮‍♀️📆 Voer de boetedatum in (DD-MM-YYYY)", standaard_datum)
 
 # Extra witruimte na het laatste invoerveld om de knop verder naar beneden te plaatsen
 st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
